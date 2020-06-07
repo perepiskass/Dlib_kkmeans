@@ -2,8 +2,6 @@
 #include "version_lib.h"
 
 
-
-
 // Тест кейсы на проверку версий
 TEST(version_test_case, version_test_patch)
 {
