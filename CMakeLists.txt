@@ -15,7 +15,7 @@ find_package(dlib REQUIRED)
 find_package(GTest REQUIRED)
 find_package(Threads)
 
-include_directories(${dlib_INCLUDE_DIRS})
+# include_directories(${dlib_INCLUDE_DIRS})
 include_directories(${GTEST_INCLUDE_DIRS})
 
 # Генерируем файл version.h при сборке из файла с уловиями version.h.in
