@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kkmeans: Файл source/create_points.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kkmeans
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл create_points.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;dlib/rand.h&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для create_points.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="create__points_8cpp__incl.png" border="0" usemap="#source_2create__points_8cpp" alt=""/></div>
+<map name="source_2create__points_8cpp" id="source_2create__points_8cpp">
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a6490783fda70fd1a5acd1db7e3cf7a83"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create__points_8cpp.html#a6490783fda70fd1a5acd1db7e3cf7a83">point</a> = std::pair&lt; double, double &gt;</td></tr>
+<tr class="separator:a6490783fda70fd1a5acd1db7e3cf7a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a232a364eebb882d49375396f80214b69"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create__points_8cpp.html#a232a364eebb882d49375396f80214b69">points</a> = std::vector&lt; <a class="el" href="create__points_8cpp.html#a6490783fda70fd1a5acd1db7e3cf7a83">point</a> &gt;</td></tr>
+<tr class="separator:a232a364eebb882d49375396f80214b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a44b12a2a13cd2c3bc11aa1857c00d62c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create__points_8cpp.html#a44b12a2a13cd2c3bc11aa1857c00d62c">get_circle</a> (<a class="el" href="create__points_8cpp.html#a232a364eebb882d49375396f80214b69">points</a> &amp;samples, const long num, const double radius, const double offset_x=0, const double offset_y=0)</td></tr>
+<tr class="memdesc:a44b12a2a13cd2c3bc11aa1857c00d62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция создания точек вокрук центра определенного радиуса.  <a href="#a44b12a2a13cd2c3bc11aa1857c00d62c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a44b12a2a13cd2c3bc11aa1857c00d62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6048238bf54b4ede2783472ae324e5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create__points_8cpp.html#aa6048238bf54b4ede2783472ae324e5b">get_starsky</a> (<a class="el" href="create__points_8cpp.html#a232a364eebb882d49375396f80214b69">points</a> &amp;samples, const long num)</td></tr>
+<tr class="memdesc:aa6048238bf54b4ede2783472ae324e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция создания произвольных точек в двумерном пространстве в диапазоне от -100 до 100.  <a href="#aa6048238bf54b4ede2783472ae324e5b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa6048238bf54b4ede2783472ae324e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee4e728fd35e2dcdc2acf85409ff64e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create__points_8cpp.html#a8ee4e728fd35e2dcdc2acf85409ff64e">create_file</a> (const <a class="el" href="create__points_8cpp.html#a232a364eebb882d49375396f80214b69">points</a> &amp;samples, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a8ee4e728fd35e2dcdc2acf85409ff64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция создания файла с координатами точек.  <a href="#a8ee4e728fd35e2dcdc2acf85409ff64e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8ee4e728fd35e2dcdc2acf85409ff64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create__points_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a1860d50318ca75ee6c59fc3a3a160164"><td class="memItemLeft" align="right" valign="top">dlib::rand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="create__points_8cpp.html#a1860d50318ca75ee6c59fc3a3a160164">rnd</a></td></tr>
+<tr class="separator:a1860d50318ca75ee6c59fc3a3a160164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a6490783fda70fd1a5acd1db7e3cf7a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6490783fda70fd1a5acd1db7e3cf7a83">&#9670;&nbsp;</a></span>point</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="create__points_8cpp.html#a6490783fda70fd1a5acd1db7e3cf7a83">point</a> =  std::pair&lt;double,double&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a232a364eebb882d49375396f80214b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a232a364eebb882d49375396f80214b69">&#9670;&nbsp;</a></span>points</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="create__points_8cpp.html#a232a364eebb882d49375396f80214b69">points</a> =  std::vector&lt;<a class="el" href="create__points_8cpp.html#a6490783fda70fd1a5acd1db7e3cf7a83">point</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a8ee4e728fd35e2dcdc2acf85409ff64e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ee4e728fd35e2dcdc2acf85409ff64e">&#9670;&nbsp;</a></span>create_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_file </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="create__points_8cpp.html#a232a364eebb882d49375396f80214b69">points</a> &amp;&#160;</td>
+          <td class="paramname"><em>samples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция создания файла с координатами точек. </p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="create__points_8cpp_a8ee4e728fd35e2dcdc2acf85409ff64e_icgraph.png" border="0" usemap="#create__points_8cpp_a8ee4e728fd35e2dcdc2acf85409ff64e_icgraph" alt=""/></div>
+<map name="create__points_8cpp_a8ee4e728fd35e2dcdc2acf85409ff64e_icgraph" id="create__points_8cpp_a8ee4e728fd35e2dcdc2acf85409ff64e_icgraph">
+<area shape="rect" id="node2" href="create__points_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="144,5,199,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44b12a2a13cd2c3bc11aa1857c00d62c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b12a2a13cd2c3bc11aa1857c00d62c">&#9670;&nbsp;</a></span>get_circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void get_circle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="create__points_8cpp.html#a232a364eebb882d49375396f80214b69">points</a> &amp;&#160;</td>
+          <td class="paramname"><em>samples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>offset_x</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>offset_y</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция создания точек вокрук центра определенного радиуса. </p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="create__points_8cpp_a44b12a2a13cd2c3bc11aa1857c00d62c_icgraph.png" border="0" usemap="#create__points_8cpp_a44b12a2a13cd2c3bc11aa1857c00d62c_icgraph" alt=""/></div>
+<map name="create__points_8cpp_a44b12a2a13cd2c3bc11aa1857c00d62c_icgraph" id="create__points_8cpp_a44b12a2a13cd2c3bc11aa1857c00d62c_icgraph">
+<area shape="rect" id="node2" href="create__points_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="139,5,193,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6048238bf54b4ede2783472ae324e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6048238bf54b4ede2783472ae324e5b">&#9670;&nbsp;</a></span>get_starsky()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void get_starsky </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="create__points_8cpp.html#a232a364eebb882d49375396f80214b69">points</a> &amp;&#160;</td>
+          <td class="paramname"><em>samples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция создания произвольных точек в двумерном пространстве в диапазоне от -100 до 100. </p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="create__points_8cpp_aa6048238bf54b4ede2783472ae324e5b_icgraph.png" border="0" usemap="#create__points_8cpp_aa6048238bf54b4ede2783472ae324e5b_icgraph" alt=""/></div>
+<map name="create__points_8cpp_aa6048238bf54b4ede2783472ae324e5b_icgraph" id="create__points_8cpp_aa6048238bf54b4ede2783472ae324e5b_icgraph">
+<area shape="rect" id="node2" href="create__points_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="152,5,207,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="create__points_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#create__points_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="create__points_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="create__points_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="create__points_8cpp.html#a44b12a2a13cd2c3bc11aa1857c00d62c" title="Функция создания точек вокрук центра определенного радиуса. " alt="" coords="115,5,200,32"/>
+<area shape="rect" id="node3" href="create__points_8cpp.html#a8ee4e728fd35e2dcdc2acf85409ff64e" title="Функция создания файла с координатами точек. " alt="" coords="112,56,203,83"/>
+<area shape="rect" id="node4" href="create__points_8cpp.html#aa6048238bf54b4ede2783472ae324e5b" title="Функция создания произвольных точек в двумерном пространстве в диапазоне от &#45;100 до 100..." alt="" coords="108,107,207,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a1860d50318ca75ee6c59fc3a3a160164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1860d50318ca75ee6c59fc3a3a160164">&#9670;&nbsp;</a></span>rnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dlib::rand rnd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

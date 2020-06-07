@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$create__points_8cpp.html#a44b12a2a13cd2c3bc11aa1857c00d62c" title="Функция создания точек вокрук центра определенного радиуса. " alt="" coords="115,5,200,32"/>
+<area shape="rect" id="node3" href="$create__points_8cpp.html#a8ee4e728fd35e2dcdc2acf85409ff64e" title="Функция создания файла с координатами точек. " alt="" coords="112,56,203,83"/>
+<area shape="rect" id="node4" href="$create__points_8cpp.html#aa6048238bf54b4ede2783472ae324e5b" title="Функция создания произвольных точек в двумерном пространстве в диапазоне от &#45;100 до 100..." alt="" coords="108,107,207,133"/>
+</map>
